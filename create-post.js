@@ -34,7 +34,7 @@ postForm.addEventListener("submit", function(event) {
 
         description: description,
 
-        image: "images/college.jpg"
+        image: "college.jpg"
 
     };
 
