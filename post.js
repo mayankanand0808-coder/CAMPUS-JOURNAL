@@ -7,7 +7,7 @@ const posts = [
 
         category: "Technology",
 
-        image: "images/coding.jpg",
+        image: "coding.jpg",
 
         content: `I started learning web development because I wanted
         to understand how websites are created.
@@ -28,7 +28,7 @@ const posts = [
 
         category: "Travel",
 
-        image: "images/travel.jpg",
+        image: "travel.jpg",
 
         content: `College life can sometimes become busy with classes,
         assignments and projects.
@@ -49,7 +49,7 @@ const posts = [
 
         category: "Productivity",
 
-        image: "images/college.jpg",
+        image: "college.jpg",
 
         content: `Managing college classes along with projects can be
         difficult when everything is left until the last moment.
