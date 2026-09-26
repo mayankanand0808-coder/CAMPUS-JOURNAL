@@ -4,163 +4,99 @@ const posts = [
 
     {
         title: "How I Built My First Website",
+
         category: "Technology",
-        image: "images/coding.jpg",
-        description: "My experience building a website using HTML, CSS and JavaScript."
+
+        image: "coding.jpg",
+
+        content: `I started learning web development because I wanted
+        to understand how websites are created.
+
+        First, I learned HTML to create the structure of the website.
+        After that, I used CSS to make the website look better.
+
+        Finally, I started learning JavaScript to add interaction
+        and dynamic content.
+
+        Building my first website helped me understand how HTML,
+        CSS and JavaScript work together.`
     },
+
 
     {
         title: "A Weekend Trip With Friends",
+
         category: "Travel",
-        image: "images/travel.jpg",
-        description: "A small trip that gave me a break from college life."
+
+        image: "travel.jpg",
+
+        content: `College life can sometimes become busy with classes,
+        assignments and projects.
+
+        A weekend trip with friends gave me a chance to take a break
+        and spend some time away from college work.
+
+        We explored new places, tried different food and took many
+        photos.
+
+        The trip reminded me that taking a small break can help us
+        feel fresh and return to our studies with better energy.`
     },
+
 
     {
         title: "Managing College and Projects",
+
         category: "Productivity",
-        image: "images/college.jpg",
-        description: "Some simple things that help me manage college work."
+
+        image: "college.jpg",
+
+        content: `Managing college classes along with projects can be
+        difficult when everything is left until the last moment.
+
+        I started making a simple list of the important tasks that
+        needed to be completed each day.
+
+        I also tried to divide bigger projects into smaller tasks.
+        This made the work easier to understand and complete.
+
+        Planning a little every day helped me manage my college work
+        and projects more comfortably.`
     }
 
 ];
 
 
-// Get saved posts from Local Storage
+// Get the post number from the URL
 
-const savedPosts =
-    JSON.parse(localStorage.getItem("campusPosts")) || [];
+const url = new URLSearchParams(window.location.search);
 
-
-// Add saved posts to existing posts
-
-savedPosts.forEach(function(post) {
-
-    posts.push(post);
-
-});
+const postNumber = url.get("id");
 
 
-// Get HTML elements
+// Select HTML elements
 
-const container =
-    document.getElementById("blogContainer");
+const title = document.getElementById("postTitle");
 
-const searchInput =
-    document.getElementById("searchInput");
+const category = document.getElementById("postCategory");
 
+const image = document.getElementById("postImage");
 
-// Current selected category
-
-let selectedCategory = "All";
+const content = document.getElementById("postContent");
 
 
-// Display Posts
+// Display selected post
 
-function displayPosts(postList) {
+const post = posts[postNumber];
 
-    container.innerHTML = "";
+if (post) {
 
+    title.innerText = post.title;
 
-    // No posts found
+    category.innerText = post.category;
 
-    if (postList.length === 0) {
+    image.src = post.image;
 
-        container.innerHTML = `
-            <p class="no-posts">
-                No posts found.
-            </p>
-        `;
-
-        return;
-    }
-
-
-    // Display matching posts
-
-    postList.forEach(function(post) {
-
-        container.innerHTML += `
-
-            <div class="post-card">
-
-                <img src="${post.image}"
-                     alt="${post.title}">
-
-                <div class="post-content">
-
-                    <small>${post.category}</small>
-
-                    <h3>${post.title}</h3>
-
-                    <p>${post.description}</p>
-
-                    <a href="post.html?id=${posts.indexOf(post)}">
-                        Read More
-                    </a>
-
-                </div>
-
-            </div>
-
-        `;
-
-    });
+    content.innerText = post.content;
 
 }
-
-
-// Filter Posts
-
-function filterPosts(category) {
-
-    selectedCategory = category;
-
-    showFilteredPosts();
-
-}
-
-
-// Search and Category Together
-
-function showFilteredPosts() {
-
-    const searchText =
-        searchInput.value.toLowerCase();
-
-
-    const filteredPosts =
-        posts.filter(function(post) {
-
-            const matchesCategory =
-                selectedCategory === "All" ||
-                post.category === selectedCategory;
-
-
-            const matchesSearch =
-                post.title.toLowerCase().includes(searchText) ||
-                post.description.toLowerCase().includes(searchText);
-
-
-            return matchesCategory && matchesSearch;
-
-        });
-
-
-    displayPosts(filteredPosts);
-
-}
-
-
-// Search when user types
-
-searchInput.addEventListener("input", function() {
-
-    showFilteredPosts();
-
-});
-
-
-// Show all posts when page opens
-
-showFilteredPosts();
