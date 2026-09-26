@@ -5,21 +5,21 @@ const posts = [
     {
         title: "How I Built My First Website",
         category: "Technology",
-        image: "images/coding.jpg",
+        image: "coding.jpg",
         description: "My experience building a website using HTML, CSS and JavaScript."
     },
 
     {
         title: "A Weekend Trip With Friends",
         category: "Travel",
-        image: "images/travel.jpg",
+        image: "travel.jpg",
         description: "A small trip that gave me a break from college life."
     },
 
     {
         title: "Managing College and Projects",
         category: "Productivity",
-        image: "images/college.jpg",
+        image: "college.jpg",
         description: "Some simple things that help me manage college work."
     }
 
