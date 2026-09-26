@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: whitesmoke;
+
+    color: midnightblue;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: white;
+
+    padding: 20px 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid lightsteelblue;
+}
+
+.logo {
+    font-size: 24px;
+
+    color: midnightblue;
+}
+
+.nav-links a {
+    color: midnightblue;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: royalblue;
+}
+
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+
+    background-color: lavender;
+
+    padding: 70px 20px;
+}
+
+.small-heading {
+    font-size: 13px;
+
+    color: slategray;
+
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 40px;
+
+    color: midnightblue;
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: slategray;
+
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+
+.button {
+    background-color: royalblue;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: mediumslateblue;
+}
+
+
+/* Latest Posts */
+
+.latest {
+    width: 85%;
+
+    margin: 50px auto;
+}
+
+.latest h2 {
+    color: midnightblue;
+
+    margin-bottom: 20px;
+}
+
+
+/* Post Container */
+
+#postContainer {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+/* Post Card */
+
+.post-card {
+    background-color: white;
+
+    width: 33%;
+
+    border: 1px solid lightsteelblue;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* Post Image */
+
+.post-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+
+/* Post Content */
+
+.post-content {
+    padding: 15px;
+}
+
+.post-content small {
+    color: royalblue;
+}
+
+.post-content h3 {
+    color: midnightblue;
+
+    margin: 8px 0;
+}
+
+.post-content p {
+    color: slategray;
+
+    margin-bottom: 15px;
+}
+
+.post-content a {
+    color: royalblue;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    color: mediumslateblue;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: midnightblue;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        margin-left: 8px;
+
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    #postContainer {
+        flex-direction: column;
+    }
+
+    .post-card {
+        width: 100%;
+    }
+
+    .latest {
+        width: 90%;
+    }
+}
+/* Blog Post Page */
+
+.post-page {
+    width: 80%;
+
+    margin: 50px auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+}
+
+.post-page small {
+    color: royalblue;
+}
+
+.post-page h2 {
+    color: midnightblue;
+
+    font-size: 35px;
+
+    margin: 15px 0 25px;
+}
+
+.post-page img {
+    width: 100%;
+
+    max-height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+}
+
+.post-page p {
+    color: slategray;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+/* Blog Page */
+
+.blog-section {
+    width: 85%;
+
+    margin: 50px auto;
+}
+
+.blog-section h2 {
+    color: midnightblue;
+
+    margin-bottom: 10px;
+}
+
+.blog-section > p {
+    color: slategray;
+
+    margin-bottom: 25px;
+}
+
+
+/* Search */
+
+#searchInput {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid lightsteelblue;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Category Buttons */
+
+.categories {
+    margin-bottom: 30px;
+}
+
+.categoryButton {
+    background-color: royalblue;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    margin-right: 8px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.categoryButton:hover {
+    background-color: mediumslateblue;
+}
+
+
+/* Blog Posts */
+
+#blogContainer {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+#blogContainer .post-card {
+    width: 31%;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    #blogContainer .post-card {
+        width: 100%;
+    }
+
+    .categoryButton {
+        margin-bottom: 10px;
+    }
+}
+/* Create Post Page */
+
+.create-section {
+    width: 70%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid lightsteelblue;
+}
+
+.create-section h2 {
+    color: midnightblue;
+    margin-bottom: 10px;
+}
+
+.create-section > p {
+    color: slategray;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+#postForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+#postForm label {
+    color: midnightblue;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+
+/* Input, Select and Textarea */
+
+#postForm input,
+#postForm select,
+#postForm textarea {
+    padding: 12px;
+    border: 1px solid lightsteelblue;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Textarea */
+
+#postForm textarea {
+    resize: vertical;
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+
+#postForm .button {
+    border: none;
+    cursor: pointer;
+    width: 150px;
+}
+
+#postForm .button:hover {
+    background-color: mediumslateblue;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .create-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+}
+/* About Page */
+
+.about-section {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* About Content */
+
+.about-content {
+    background-color: white;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid lightsteelblue;
+    flex: 2;
+}
+
+.about-content .small-heading {
+    color: slategray;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    color: midnightblue;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: slategray;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* About Box */
+
+.about-box {
+    background-color: lavender;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.about-box h3 {
+    color: midnightblue;
+    margin-bottom: 20px;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box li {
+    color: slategray;
+    margin-bottom: 15px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+}

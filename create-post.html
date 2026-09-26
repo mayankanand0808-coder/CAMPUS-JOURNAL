@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Post - The Campus Journal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h1 class="logo">
+                The Campus Journal
+            </h1>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="blog.html">Blog</a>
+
+                <a href="create-post.html">Write</a>
+
+                <a href="about.html">About</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Create Post Section -->
+
+    <main>
+
+        <section class="create-section">
+
+            <h2>Write a New Post</h2>
+
+            <p>
+                Share your thoughts, experiences and ideas.
+            </p>
+
+
+            <!-- Post Form -->
+
+            <form id="postForm">
+
+                <!-- Title -->
+
+                <label for="postTitle">
+                    Post Title
+                </label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Enter your post title"
+                    required
+                >
+
+
+                <!-- Category -->
+
+                <label for="postCategory">
+                    Category
+                </label>
+
+                <select id="postCategory" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Technology">
+                        Technology
+                    </option>
+
+                    <option value="Travel">
+                        Travel
+                    </option>
+
+                    <option value="Productivity">
+                        Productivity
+                    </option>
+
+                </select>
+
+
+                <!-- Description -->
+
+                <label for="postDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="postDescription"
+                    rows="8"
+                    placeholder="Write your post here..."
+                    required
+                ></textarea>
+
+
+                <!-- Publish Button -->
+
+                <button type="submit" class="button">
+                    Publish Post
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 The Campus Journal
+        </p>
+
+    </footer>
+    <script src="js/create-post.js"></script>
+
+
+</body>
+
+</html>

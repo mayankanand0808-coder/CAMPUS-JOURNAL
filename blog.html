@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog - The Campus Journal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h1 class="logo">
+                The Campus Journal
+            </h1>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="blog.html">Blog</a>
+
+                <a href="create-post.html">Write</a>
+
+                <a href="about.html">About</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Blog Section -->
+
+    <main>
+
+        <section class="blog-section">
+
+            <h2>All Blog Posts</h2>
+
+            <p>
+                Explore my posts about technology, travel and college life.
+            </p>
+
+
+            <!-- Search Box -->
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search posts..."
+            >
+
+
+            <!-- Category Buttons -->
+
+            <div class="categories">
+
+                <button class="categoryButton" onclick="filterPosts('All')">
+                    All
+                </button>
+
+                <button class="categoryButton" onclick="filterPosts('Technology')">
+                    Technology
+                </button>
+
+                <button class="categoryButton" onclick="filterPosts('Travel')">
+                    Travel
+                </button>
+
+                <button class="categoryButton" onclick="filterPosts('Productivity')">
+                    Productivity
+                </button>
+
+            </div>
+
+
+            <!-- Posts -->
+
+            <div id="blogContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 The Campus Journal
+        </p>
+
+    </footer>
+
+
+    <script src="js/blog.js"></script>
+
+</body>
+
+</html>
